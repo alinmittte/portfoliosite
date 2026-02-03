@@ -4,17 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>aline iris schüpbach – portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     /* grundfarben & schrift */
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Courier New', Courier, monospace;
-      background-color: #FFFFF0; /* creme */
-      color: #EC5800;
+      font-family: 'Poppins', sans-serif;
+      background-color: #F6F7FA; /* creme */
+      color: #000000;
       line-height: 1.6;
-      font-size: 16px;
-      text-transform: lowercase;
+      font-size: 14px;
     }
 
     a {
@@ -23,13 +25,14 @@
     }
 
     a:hover {
+      color: #F28C28
       text-decoration: underline;
     }
 
     header {
       padding: 40px 20px;
       text-align: center;
-      background-color: #FFFFF0; /* gleiche Farbe wie Hintergrund */
+      background-color: #F6F7FA; /* gleiche Farbe wie Hintergrund */
       border-bottom: none;
     }
 
@@ -60,6 +63,7 @@
       margin: 0 0 10px 0;
       font-size: 16px;
       font-weight: bold;
+      color: #EC5800
       letter-spacing: 0.5px;
     }
 
@@ -77,7 +81,7 @@
     .project {
       margin-top: 20px;
       padding: 15px;
-      background-color: #FFFFF0; /* gleiche Farbe wie Hintergrund */
+      background-color: #F6F7FA; /* gleiche Farbe wie Hintergrund */
       border-radius: 0;
     }
 
@@ -86,7 +90,7 @@
       padding: 40px 20px;
       font-size: 16px;
       letter-spacing: 0.5px;
-      background-color: #FFFFF0; /* gleiche Farbe wie Hintergrund */
+      background-color: #F6F7FA; /* gleiche Farbe wie Hintergrund */
       border-top: none;
     }
 
@@ -94,15 +98,17 @@
       word-break: break-all;
     }
 
-    /* Bild zwischen Header und About */
-    img.portrait {
-      display: block;             /* block für margin auto */
-      margin: 6em auto 2em auto;  /* viel Abstand oben (6em) und unten (2em) */
-      width: 35mm;                /* feste Breite */
-      height: 45mm;               /* feste Höhe */
-      object-fit: cover;          /* proportional zuschneiden */
-      border-radius: 5px;         /* optional: leicht abgerundet */
-    }
+ img.portrait {
+  position: fixed;          /* wichtig: frei über der seite */
+  top: 100px;
+  left: 100px;
+  width: 35mm;
+  height: 45mm;
+  object-fit: cover;
+  border-radius: 5px;
+  z-index: 10;              /* über dem rest */
+  pointer-events: none;    /* klicks gehen durch */
+}
 
   </style>
 </head>
@@ -110,11 +116,11 @@
 
   <header>
     <h1>aline iris schüpbach</h1>
-    <p> <3 text <3 theater <3 und so <3 </p>
+    <p> :-) </p>
   </header>
 
   <!-- Bild zwischen Header und About -->
-  <img src="bilder/Screenshot 2026-02-03 024633.png" 
+  <img src="bilder/Screenshot 2026-02-03 020039.png" 
        alt="Portrait von Aline Iris Schüpbach" 
        class="portrait">
 
@@ -123,14 +129,14 @@
     <section id="about">
       <h2>über</h2>
       <p>
-        Aline Iris Schüpbach (sie/keine), *2000 in Biel/Bienne, arbeitet nach ihrem Bachelor in Vermittlung von Kunst und Design an unterschiedlichen Projekten in bildender und darstellender Kunst und Vermittlung, meistens mit Fokus Text. Neben Assistenzen zwischen Dramaturgie, Regie und Produktion an unterschiedlichen Theaterhäusern beschäftigt sie sich in ihrem Atelier mit dem Schreiben und Einsprechen von Texten. 
+        aline iris schüpbach (sie/keine), *2000 in biel/bienne, schreibt. meistens im kontext darstellender oder bildender kunst und vermittlung. darunter assistenzen zwischen dramaturgie, regie und produktion bei unterschiedlichen theatermacher*innen, support von kompliz*innen und eigene künstlerische praxis. 
       </p>
 
       <p>
-        Gerade beschäftigen sie Archive, Soziale Medien und das Internet, das Vergessen und das Erinnern. Und immer immer immer das Erzählen.
+        <3 kollektives schreiben, archive, soziale medien und das internet, das verlieren, vergessen und erinnern. und immer immer immer das erzählen.
       </p>
       <p>
-        diese website ist zugleich portfolio und playground. 
+        diese website ist zugleich portfolio und playground. / sie versucht sich im coden
       </p>
     </section>
 
@@ -147,8 +153,8 @@
       <h2>projekte</h2>
 
       <div class="project">
-        <h2>zucker3000</h2>
-        <p>zucker3000 schreibt im kollektiv, immer. das aktuelle projekt heisst poetryspam. wöchentlich flattert eine mail in die digitalen mailfächer der glücklichen empfänger*innen. willst du auch? schreib eine mail an zuckerdreitausend@gmail.com !</p>
+        <h2>poetryspam</h2>
+        <p>kollektiv zucker3000 schreibt. wöchentlich flattert eine mail in die digitalen mailfächer der glücklichen empfänger*innen. willst du auch? schreib eine mail an zuckerdreitausend@gmail.com !</p>
 
       </div>
 
@@ -160,7 +166,7 @@
 
       <div class="project">
         <h2>who is georgia</h2>
-        <p>der bieler theaterverein who is georgia realisiert seit 2019 eigene stücke, bisher unter regie von cyriel ross. bald kommt neues!</p>
+        <p>der bieler theaterverein realisiert seit 2019 eigene stücke, bisher unter regie von cyriel ross. </p>
       
       </div>
 
@@ -178,9 +184,47 @@
   <footer>
     © 2026 aline iris schüpbach
   </footer>
+<script>
+  const dvd = document.querySelector('.portrait');
+
+  let x = Math.random() * (window.innerWidth - dvd.offsetWidth);
+  let y = Math.random() * (window.innerHeight - dvd.offsetHeight);
+
+  let vx = 1.2; // geschwindigkeit horizontal
+  let vy = 1.2; // geschwindigkeit vertikal
+
+  function animate() {
+    x += vx;
+    y += vy;
+
+    // rechte / linke kante
+    if (x + dvd.offsetWidth >= window.innerWidth || x <= 0) {
+      vx = -vx;
+    }
+
+    // untere / obere kante
+    if (y + dvd.offsetHeight >= window.innerHeight || y <= 0) {
+      vy = -vy;
+    }
+
+    dvd.style.left = x + 'px';
+    dvd.style.top = y + 'px';
+
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+
+  // bei resize neu einfangen
+  window.addEventListener('resize', () => {
+    x = Math.min(x, window.innerWidth - dvd.offsetWidth);
+    y = Math.min(y, window.innerHeight - dvd.offsetHeight);
+  });
+</script>
 
 </body>
 </html>
+
 
 
 
